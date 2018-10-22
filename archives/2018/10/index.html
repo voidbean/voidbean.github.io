@@ -346,72 +346,6 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2018/10/22/ES配置常见问题/">
-            
-                <span>ES配置常见问题</span>
-        </a>
-        <div class="abstract-content">
-            ES配置常见问题按着网上的乱七八糟的各种配制方法配置ES，结果启动的时候报了自检失败的错误
-
-ERROR: [X] bootstrap checks failed
-
-这些错误都是因为某项检查自检没有通过而报的错，我自己的虚拟机出现的错误如下：
-1 “for elasticsearch process is too low, increase to at least [65536]”原因：启动ES的用户权限过低，需要提升到65536。解决方法：使用root用户，进入/etc/security/limits.conf，在最后加入你的用户名 soft nofile 65536和你的用户名 ha...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="elasticsearch">elasticsearch</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/10/22/Mybatis通过ResultMap实现关联查询/">
-            
-                <span>Mybatis通过ResultMap实现关联查询</span>
-        </a>
-        <div class="abstract-content">
-            Mybatis通过ResultMap实现关联查询本文主要讲通过以resultmap为主实现mybatis一对一、一对多的关联查询的两种方式。
-实体类关系用户类(User)与用户组别类(Group)，关系为一对一。用户类(User)与邮件类(Mail),关系为一对多。即每个用户有一个自己归属的组别，同时这个用户手里也有多条接收到的邮件。1234567891011121314151617User&#123;    private Long userId;    private String userName;    private String userPass;    private Lo...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="mybatis">mybatis</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="springboot">springboot</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href="/2018/10/22/Elasticsearch2.X与5.X中文分词插件IK的配置/">
             
                 <span>Elasticsearch2.X与5.X中文分词插件IK配置详解</span>
@@ -443,69 +377,6 @@ ERROR: [X] bootstrap checks failed
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2018/10/22/git常用命令/">
-            
-                <span>git常用命令</span>
-        </a>
-        <div class="abstract-content">
-            git常用命令1.远程分支关联1git remote add origin git地址
-2.获取本地1git pull &lt;remote&gt; &lt;branch&gt;
-或者1git fetch &lt;remote&gt; &lt;branch&gt;
-区别:pull相当于fetch+merge,所以fetch更安全一点,pull更方便一点3.推送1git push &lt;remote&gt; &lt;branch&gt;
-4.只删除远程分支上内容,不删除本地123git rm -r --cached .idea  #--cached不会把本地的.idea删除git com...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="git">git</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/10/22/nginx解决跨域原理及相关配置/">
-            
-                <span>nginx如何解决跨域问题</span>
-        </a>
-        <div class="abstract-content">
-            nginx解决跨域原理及相关配置1、什么是跨域从某一个域请求其他域的各类资源，其中只要两个地址的域名、端口以及协议有不同的地方就会视为跨域，跨域资源无法直接获取。比如：域名不同  www.a.com/1.html 请求 www.b.com/1.js端口不同  www.a.com:**8000**/1.html 请求 www.a.com:**8001**/1.js协议不同  http://www.a.com/1.html 请求 https://www.a.com/1.html 
-2、nginx如何解决跨域问题拿上面的来举例，a网站向b网站请求1.js文件时，向b网站发送一个获取的请求，ng...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="nginx">nginx</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href="/2018/10/19/hello-world/">
             
                 <span>Hello World</span>
@@ -523,6 +394,39 @@ More...
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/19</span>
             </div>
             <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2018/10/09/git常用命令/">
+            
+                <span>git常用命令</span>
+        </a>
+        <div class="abstract-content">
+            git常用命令1.远程分支关联1git remote add origin git地址
+2.获取本地1git pull &lt;remote&gt; &lt;branch&gt;
+或者1git fetch &lt;remote&gt; &lt;branch&gt;
+区别:pull相当于fetch+merge,所以fetch更安全一点,pull更方便一点3.推送1git push &lt;remote&gt; &lt;branch&gt;
+4.只删除远程分支上内容,不删除本地123git rm -r --cached .idea  #--cached不会把本地的.idea删除git com...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/09</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="git">git</a>
+    
+</div>
             
         </div>
     </article>
@@ -680,10 +584,6 @@ More...
     
     
     
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 6
@@ -702,32 +602,32 @@ More...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/22</span><a class="archive-post-title" href="/2018/10/22/nginx解决跨域原理及相关配置/">nginx如何解决跨域问题</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/22</span><a class="archive-post-title" href="/2018/10/22/git常用命令/">git常用命令</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">10/22</span><a class="archive-post-title" href="/2018/10/22/Elasticsearch2.X与5.X中文分词插件IK的配置/">Elasticsearch2.X与5.X中文分词插件IK配置详解</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/22</span><a class="archive-post-title" href="/2018/10/22/Mybatis通过ResultMap实现关联查询/">Mybatis通过ResultMap实现关联查询</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/22</span><a class="archive-post-title" href="/2018/10/22/ES配置常见问题/">ES配置常见问题</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">10/19</span><a class="archive-post-title" href="/2018/10/19/hello-world/">Hello World</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/09</span><a class="archive-post-title" href="/2018/10/09/git常用命令/">git常用命令</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/18</span><a class="archive-post-title" href="/2018/09/18/ES配置常见问题/">ES配置常见问题</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/03</span><a class="archive-post-title" href="/2018/09/03/Mybatis通过ResultMap实现关联查询/">Mybatis通过ResultMap实现关联查询</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/30</span><a class="archive-post-title" href="/2018/08/30/nginx解决跨域原理及相关配置/">nginx如何解决跨域问题</a>
         </li>
     
     </ul></div>
@@ -737,13 +637,13 @@ More...
     
         <span class="sidebar-tag-name" data-tags="elasticsearch"><span class="iconfont-archer">&#xe606;</span>elasticsearch</span>
     
-        <span class="sidebar-tag-name" data-tags="mybatis"><span class="iconfont-archer">&#xe606;</span>mybatis</span>
-    
-        <span class="sidebar-tag-name" data-tags="springboot"><span class="iconfont-archer">&#xe606;</span>springboot</span>
-    
         <span class="sidebar-tag-name" data-tags="中文分词"><span class="iconfont-archer">&#xe606;</span>中文分词</span>
     
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
+    
+        <span class="sidebar-tag-name" data-tags="mybatis"><span class="iconfont-archer">&#xe606;</span>mybatis</span>
+    
+        <span class="sidebar-tag-name" data-tags="springboot"><span class="iconfont-archer">&#xe606;</span>springboot</span>
     
         <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
     
