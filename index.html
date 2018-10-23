@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Bean Alter</title>
+    <title>Bean|Alter</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -185,7 +185,7 @@
 }( typeof global !== "undefined" ? global : this ) );
 </script>
 
-    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="icon" href="/assets/deer_favicon.ico">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script">
     <link rel="preload" href="/scripts/main.js" as="script">
@@ -210,7 +210,7 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
-    <a class="home-link" href="/">Mr.Alter</a>
+    <a class="home-link" href="/">Chaldeas</a>
 </header>
     <div class="wrapper">
         <div class="site-intro" style="
@@ -230,13 +230,13 @@ height:50vh;
     <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/index-chaldeas.jfif)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Mr.Alter
+            Chaldeas
             <!-- 文章页  -->
             
         </h1>
@@ -245,7 +245,7 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                Everything is for the futrue.
+                Everything is for the beauty futrue.
             
             <!-- 文章页  -->
             
@@ -364,7 +364,7 @@ height:50vh;
                 <span>Elasticsearch2.X与5.X中文分词插件IK配置详解</span>
         </a>
         <div class="abstract-content">
-            1.IK的安装与配置首先是安装,ES安装此处不再赘述,ES对应的版本号大致对比如下IK version | ES version———–|———–master | 6.x -&gt; master6.3.0| 6.3.06.2.4| 6.2.46.1.3| 6.1.35.6.8| 5.6.85.5.3| 5.5.35.4.3| 5.4.35.3.3| 5.3.35.2.2| 5.2.25.1.2| 5.1.21.10.6 | 2.4.61.9.5 | 2.3.51.8.1 | 2.2.11.7.0 | 2.1.11.5.0 | 2.0.01.2.6 | 1.0.01.2.5 | 0.90...
+            关于ElasticSearch的分词插件的配置，为了替换掉原来的睿智分词进行了一定程度的修改。IK分词功能着实强大，然而此时英文分词又会出现一定问题，本文顺带解决了下英文分词的部分问题。除此之外还有坑爹的ES配置，2.X和5.X版本跨度也是没谁了。
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -395,11 +395,7 @@ height:50vh;
                 <span>git常用命令</span>
         </a>
         <div class="abstract-content">
-            git常用命令1.远程分支关联1git remote add origin git地址
-2.获取本地1git pull &lt;remote&gt; &lt;branch&gt;
-或者1git fetch &lt;remote&gt; &lt;branch&gt;
-区别:pull相当于fetch+merge,所以fetch更安全一点,pull更方便一点3.推送1git push &lt;remote&gt; &lt;branch&gt;
-4.只删除远程分支上内容,不删除本地123git rm -r --cached .idea  #--cached不会把本地的.idea删除git com...
+            随手记录的git命令，大概会经常更新。git还是很好用的，就是命令有时候老忘，还有怕一不小心把自己或者别人的文件给改了,总是翻百度谷歌也是麻烦,干脆顺手记下来。顺带一提这玩意给游戏存档当云存档贼方便哈哈哈。
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -428,12 +424,7 @@ height:50vh;
                 <span>ES配置常见问题</span>
         </a>
         <div class="abstract-content">
-            ES配置常见问题按着网上的乱七八糟的各种配制方法配置ES，结果启动的时候报了自检失败的错误
-
-ERROR: [X] bootstrap checks failed
-
-这些错误都是因为某项检查自检没有通过而报的错，我自己的虚拟机出现的错误如下：
-1 “for elasticsearch process is too low, increase to at least [65536]”原因：启动ES的用户权限过低，需要提升到65536。解决方法：使用root用户，进入/etc/security/limits.conf，在最后加入你的用户名 soft nofile 65536和你的用户名 ha...
+            Linux虚拟机配置ES时出了的一些问题，比如用户权限过低、内存不够、线程数不足，反正要求多的一批……
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -462,8 +453,7 @@ ERROR: [X] bootstrap checks failed
                 <span>Mybatis通过ResultMap实现关联查询</span>
         </a>
         <div class="abstract-content">
-            Mybatis通过ResultMap实现关联查询本文主要讲通过以resultmap为主实现mybatis一对一、一对多的关联查询的两种方式。
-实体类关系用户类(User)与用户组别类(Group)，关系为一对一。用户类(User)与邮件类(Mail),关系为一对多。即每个用户有一个自己归属的组别，同时这个用户手里也有多条接收到的邮件。1234567891011121314151617User&#123;    private Long userId;    private String userName;    private String userPass;    private Lo...
+            自己整理的Mybatis的笔记，主要是ResultMap的配置，用于关联查询，虽然mybatis的动态sql很强大不过还是感觉有点麻烦就是了……我在想我当初把这玩意扔给那仨实习生会不会他们做的能快一点……
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -494,8 +484,7 @@ ERROR: [X] bootstrap checks failed
                 <span>nginx如何解决跨域问题</span>
         </a>
         <div class="abstract-content">
-            nginx解决跨域原理及相关配置1、什么是跨域从某一个域请求其他域的各类资源，其中只要两个地址的域名、端口以及协议有不同的地方就会视为跨域，跨域资源无法直接获取。比如：域名不同  www.a.com/1.html 请求 www.b.com/1.js端口不同  www.a.com:**8000**/1.html 请求 www.a.com:**8001**/1.js协议不同  http://www.a.com/1.html 请求 https://www.a.com/1.html 
-2、nginx如何解决跨域问题拿上面的来举例，a网站向b网站请求1.js文件时，向b网站发送一个获取的请求，ng...
+            之前跟前端的同事调接口的时候出的跨域问题，当时我这边加了Nginx来反向代理之后解决了跨域问题。不过后来他们那边也找了个方法反向代理，之后不用我这边单独起一个nginx了。
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -519,11 +508,11 @@ ERROR: [X] bootstrap checks failed
             <!-- profile -->
             
             <div class="profile">
-    <img class="profile-avatar" alt="avatar" src="/avatar/komaeda.jpg">
+    <img class="profile-avatar" alt="avatar" src="/avatar/deer.jpg">
     <div class="profile-name">VoidBean</div>
     
     <div class="profile-signature">
-        Hello World?
+        Time is so sad and fleeting.
     </div>
     
     
@@ -543,10 +532,12 @@ ERROR: [X] bootstrap checks failed
         
     
         
+    
+        
             
-                <span class="iconfont-archer wechat" title="wechat">
+                <span class="iconfont-archer qq" title="qq">
                   
-                  <img class="profile-qr" src="/assets/example_qr.png">
+                  <img class="profile-qr" src="/assets/qq_qr.jpg">
                 </span>
             
         
@@ -554,7 +545,9 @@ ERROR: [X] bootstrap checks failed
         
     
         
-    
+            
+                <a href="//weibo.com/u/5573721427" class="iconfont-archer weibo" target="_blank" title="weibo"></a>
+            
         
     
         
@@ -574,7 +567,9 @@ ERROR: [X] bootstrap checks failed
         
     
         
-    
+            
+                <a href="//www.v2ex.com/member/voidbean" class="iconfont-archer v2ex" target="_blank" title="v2ex"></a>
+            
         
     
         
@@ -583,6 +578,12 @@ ERROR: [X] bootstrap checks failed
     
         
     
+        
+    
+        
+            
+                <a href="/atom.xml" class="iconfont-archer rss" target="_blank" title="rss"></a>
+            
         
     
 
@@ -594,14 +595,10 @@ ERROR: [X] bootstrap checks failed
             
                 
                     <span>
-                        <a href="//www.baidu.com" target="_black">friendA</a>
+                        <a href="//blog.csdn.net/qq_30130355" target="_black">CSDN</a>
                     </span>
                 
             
-                
-                    <span>
-                        <a href="//www.google.com" target="_black">friendB</a>
-                    </span>
                 
             
                 
@@ -635,10 +632,12 @@ ERROR: [X] bootstrap checks failed
         
     
         
+    
+        
             
-                <span class="iconfont-archer wechat" title="wechat">
+                <span class="iconfont-archer qq" title="qq">
                   
-                  <img class="profile-qr" src="/assets/example_qr.png">
+                  <img class="profile-qr" src="/assets/qq_qr.jpg">
                 </span>
             
         
@@ -646,7 +645,9 @@ ERROR: [X] bootstrap checks failed
         
     
         
-    
+            
+                <a href="//weibo.com/u/5573721427" class="iconfont-archer weibo" target="_blank" title="weibo"></a>
+            
         
     
         
@@ -666,7 +667,9 @@ ERROR: [X] bootstrap checks failed
         
     
         
-    
+            
+                <a href="//www.v2ex.com/member/voidbean" class="iconfont-archer v2ex" target="_blank" title="v2ex"></a>
+            
         
     
         
@@ -675,6 +678,12 @@ ERROR: [X] bootstrap checks failed
     
         
     
+        
+    
+        
+            
+                <a href="/atom.xml" class="iconfont-archer rss" target="_blank" title="rss"></a>
+            
         
     
 
@@ -707,6 +716,10 @@ ERROR: [X] bootstrap checks failed
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
     
     
     
@@ -794,15 +807,15 @@ ERROR: [X] bootstrap checks failed
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="elasticsearch"><span class="iconfont-archer">&#xe606;</span>elasticsearch</span>
-    
-        <span class="sidebar-tag-name" data-tags="中文分词"><span class="iconfont-archer">&#xe606;</span>中文分词</span>
-    
-        <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
-    
         <span class="sidebar-tag-name" data-tags="mybatis"><span class="iconfont-archer">&#xe606;</span>mybatis</span>
     
         <span class="sidebar-tag-name" data-tags="springboot"><span class="iconfont-archer">&#xe606;</span>springboot</span>
+    
+        <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
+    
+        <span class="sidebar-tag-name" data-tags="elasticsearch"><span class="iconfont-archer">&#xe606;</span>elasticsearch</span>
+    
+        <span class="sidebar-tag-name" data-tags="中文分词"><span class="iconfont-archer">&#xe606;</span>中文分词</span>
     
         <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
     
