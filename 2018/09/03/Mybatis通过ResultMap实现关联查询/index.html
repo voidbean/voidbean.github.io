@@ -1,172 +1,58 @@
+
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
+<html lang="" class="loading">
 <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kibo - Everything is for the future.</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--Description-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="Fechin,"> 
     
-        <meta name="description" content="Mybatis通过ResultMap实现关联查询本文主要讲通过以resultmap为主实现mybatis一对一、一对多的关联查询的两种方式。
-实体类关系用户类(User)与用户组别类(Group)，关系为一对一。用户类(User)与邮件类(Mail),关系为一对多。即每个用户有一个自己归属的组别，同">
-    
-
-    <!--Author-->
-    
-        <meta name="author" content="VoidBean">
-    
-
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="Mybatis通过ResultMap实现关联查询">
-    
-
-    <!--Open Graph Description-->
-    
-
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="Kibo">
-
-    <!--Type page-->
-    
-        <meta property="og:type" content="article">
-    
-
-    <!--Page Cover-->
-    
-
-    <meta name="twitter:card" content="summary">
-    
-
-    <!-- Title -->
-    
-    <title>Mybatis通过ResultMap实现关联查询 - Kibo</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Gallery -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Google Analytics -->
-    
-
-
+    <meta name="author" content="VoidBean"> 
+    <link rel="alternative" href="atom.xml" title="Kibo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
 </head>
-
-
-<body>
-
-<div class="bg-gradient"></div>
-<div class="bg-pattern"></div>
-
-<!-- Menu -->
-<!--Menu Links and Overlay-->
-<div class="menu-bg">
-    <div class="menu-container">
-        <ul>
-            
-            <li class="menu-item">
-                <a href="/">
-                    Home
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/archives">
-                    Archives
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/about.html">
-                    About
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/tags">
-                    Tags
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/categories">
-                    Categories
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/contact.html">
-                    Contact
-                </a>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
-<!--Hamburger Icon-->
-<nav>
-    <a href="#menu"></a>
-</nav>
-
-<div class="container">
-
-    <!-- Main Content -->
-    <div class="row">
-    <div class="col-sm-12">
-
-        <!--Title and Logo-->
-        <header>
-    <div class="logo">
-        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
-        
-    </div>
-</header>
-
-        <section class="main">
-            
-<div class="post">
-
-    <div class="post-header">
-        <h1 class="title">
-            <a href="/2018/09/03/Mybatis通过ResultMap实现关联查询/">
-                Mybatis通过ResultMap实现关联查询
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2018-09-03</span>
-            
-            
-            
+</html>
+<body class="loading">
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">Mybatis通过ResultMap实现关联查询</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
         </div>
     </div>
+    <div class="scrollbar"></div>
+</div>
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">Mybatis通过ResultMap实现关联查询</h1>
+        <div class="stuff">
+            <span>九月 03, 2018</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/MyBatis/">MyBatis</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/SpringBoot/">SpringBoot</a></li></ul>
 
-    <div class="content">
 
-        <!-- Gallery -->
-        
-
-        <!-- Post Content -->
-        <h1 id="Mybatis通过ResultMap实现关联查询"><a href="#Mybatis通过ResultMap实现关联查询" class="headerlink" title="Mybatis通过ResultMap实现关联查询"></a>Mybatis通过ResultMap实现关联查询</h1><p>本文主要讲通过以resultmap为主实现mybatis一对一、一对多的关联查询的两种方式。</p>
+        </div>
+        <div class="content markdown">
+            <h1 id="Mybatis通过ResultMap实现关联查询"><a href="#Mybatis通过ResultMap实现关联查询" class="headerlink" title="Mybatis通过ResultMap实现关联查询"></a>Mybatis通过ResultMap实现关联查询</h1><p>本文主要讲通过以resultmap为主实现mybatis一对一、一对多的关联查询的两种方式。</p>
 <h3 id="实体类关系"><a href="#实体类关系" class="headerlink" title="实体类关系"></a>实体类关系</h3><p>用户类(User)与用户组别类(Group)，关系为一对一。<br>用户类(User)与邮件类(Mail),关系为一对多。<br>即每个用户有一个自己归属的组别，同时这个用户手里也有多条接收到的邮件。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">User&#123;</span><br><span class="line">    <span class="keyword">private</span> Long userId;</span><br><span class="line">    <span class="keyword">private</span> String userName;</span><br><span class="line">    <span class="keyword">private</span> String userPass;</span><br><span class="line">    <span class="keyword">private</span> Long groupId;</span><br><span class="line">&#125;</span><br><span class="line">Group&#123;</span><br><span class="line">    <span class="keyword">private</span> Long groupId;</span><br><span class="line">    <span class="keyword">private</span> String groupName;</span><br><span class="line">&#125;</span><br><span class="line">Mail&#123;</span><br><span class="line">    <span class="keyword">private</span> Long mailId;	</span><br><span class="line">    <span class="keyword">private</span> Long userId;	<span class="comment">//邮件通过userId来进行关联查询</span></span><br><span class="line">    <span class="keyword">private</span> String recipient;</span><br><span class="line">    <span class="keyword">private</span> String sender;</span><br><span class="line">    <span class="keyword">private</span> String detail;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="1、通过join进行sql的连接查询"><a href="#1、通过join进行sql的连接查询" class="headerlink" title="1、通过join进行sql的连接查询"></a>1、通过join进行sql的连接查询</h3><p>首先写对应的select查询语句，以左连接的方式查询出对应的Group信息和Mail信息<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"selectUserWithAll"</span> <span class="attr">resultMap</span>=<span class="string">"UserWithAll"</span>&gt;</span></span><br><span class="line">    select u.*,g.*,m.* from User u</span><br><span class="line">    left join Group g on g.groupId = u.groupId</span><br><span class="line">    left join Mail m on m.user = u.userId</span><br><span class="line">    where u.userId = #&#123;userId&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>于是在执行该方法时，mybatis会依照该sql语句查询出对应的用户的用户信息、组别信息和邮件信息，并将该信息存入UserWithAll这个resultMap指向的实体类。为了接收这些信息，需要新建一个实体类UserWithAll，内容如下<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">UserWithAll extends User&#123;</span><br><span class="line">    <span class="keyword">private</span> Group group;</span><br><span class="line">    <span class="keyword">private</span> List&lt;Mail&gt; mail;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -178,193 +64,90 @@
 <p>同样的Mail的resultMap与select也跟这个一样，不再赘述。经过以上配置后，在执行相应的如<code>List&lt;UserWithAll&gt; selectUserWithAll()</code>这样的方法时，会自动执行Group与Mail的select方法，然后通过resultMap映射至UserWithAll实体类中的group与mail中。</p>
 <h3 id="3、总结"><a href="#3、总结" class="headerlink" title="3、总结"></a>3、总结</h3><p>这两种方法都可以实现表关联查询，区别在于一种关联查询是通过数据库的sql语句直接获取相应的信息，另一种则是通过resultMap先执行关联的查询，将结果映射回本身的resultMap。两者比较起来的话，前者书写简单，只要配一个resultMap以及在select里加上left join一类的关键字就可以，但执行效率不高，特别是在没有给外键建立索引且数据量较大的情况下，这种方法耗费时长可以说是令人发指。后者书写要稍微麻烦一点，一个是除了要配置resultMap外，还要单独写一份sql语句，但是效率要远高于前者。所以如果是小量数据的关联查询用left join无可厚非，如果数据量大的话尽量使用后者这种方式。顺带一提这两个方式也是可以结合使用的，比如A、B、C三张表关联查询，其中AB数据量较大，C只是A表的一张参数表，那么可以给A和B使用后者那种方法，以A为基础建立resultMap，加入<code>&lt;association property=&quot;B&quot; column=&quot;A.id&quot; select=&quot;selectB&quot;/&gt;</code>或者<code>&lt;collection  property=&quot;B&quot; column=&quot;A.id&quot; select=&quot;selectB&quot;/&gt;</code>进行关联的查询，然后在这个resultMap里加一个<code>&lt;association property=&quot;C&quot; javaType=&quot;xx.xx.C&quot; resultMap=&quot;xx.xx.C&quot;/&gt;</code>指向C的resultMap，在查询语句里left join C表即可。</p>
 
-    </div>
-
-    
-
-    
-        <div class="post-tags">
-            <i class="fa fa-tags" aria-hidden="true"></i>
-            <a href="/tags/SpringBoot/">#SpringBoot</a> <a href="/tags/MyBatis/">#MyBatis</a>
-        </div>
-    
-
-    <!-- Comments -->
-    
-
-</div>
-        </section>
-
-    </div>
-</div>
-
-
-</div>
-
-<!-- Footer -->
-<div class="push"></div>
-
-<footer class="footer-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
-                <h2>About</h2>
-                <p>
-                    This theme was developed by <a href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
-                </p>
-            </div>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
             
-    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
-        <h2>Recent Posts</h2>
-        <ul>
-            
-            <li>
-                <a class="footer-post" href="/2018/12/27/通过assembly自定义maven打包方式/">通过assembly自定义maven打包方式</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2018/12/27/ESPER引擎执行告警判断/">ESPER引擎执行告警判断</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2018/12/14/通过RestTemplate向Eureka注册的服务发送请求/">通过RestTemplate向Eureka注册的服</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2018/10/22/Elasticsearch2.X与5.X中文分词插件IK的配置/">Elasticsearch2.X与5.X中文分词插</a>
-            </li>
-            
-        </ul>
-    </div>
-
-
-
-            
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <ul class="list-inline footer-social-icons">
+                <ul id="audio-list" style="display:none">
                     
-                    <li class="list-inline-item">
-                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-github"></i>
-                            </span>
-                        </a>
-                    </li>
+                        <li title="0" data-url="http://link.hhtjim.com/163/5146554.mp3"></li>
                     
-                    
-                    <li class="list-inline-item">
-                        <a href="https://twitter.com/?lang=en">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-twitter"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://www.facebook.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-facebook"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://www.instagram.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-instagram"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://dribbble.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-dribbble"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://plus.google.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-google-plus"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://www.behance.net/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-behance"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://500px.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-500px"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="mailto:test@example.com">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-envelope-o"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="\#">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-rss"></i>
-                            </span>
-                        </a>
-                    </li>
+                        <li title="1" data-url="http://link.hhtjim.com/qq/001faIUs4M2zna.mp3"></li>
                     
                 </ul>
-            </div>
+            
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="footer-copyright">
-                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+        
+    <div id="gitalk-container" class="comment link" data-ae="false" data-ci="" data-cs="" data-r="" data-o="" data-a="" data-d="false">查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
                 </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
             </div>
         </div>
     </div>
-</footer>
-
-<!-- After footer scripts -->
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
+</div>
 
 
 
-</body>
 
 </html>

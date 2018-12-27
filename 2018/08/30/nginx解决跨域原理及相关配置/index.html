@@ -1,362 +1,146 @@
+
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
+<html lang="" class="loading">
 <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kibo - Everything is for the future.</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--Description-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="Fechin,"> 
     
-        <meta name="description" content="nginx解决跨域原理及相关配置1、什么是跨域从某一个域请求其他域的各类资源，其中只要两个地址的域名、端口以及协议有不同的地方就会视为跨域，跨域资源无法直接获取。比如：域名不同  www.a.com/1.html 请求 www.b.com/1.js端口不同  www.a.com:**8000**/1">
-    
-
-    <!--Author-->
-    
-        <meta name="author" content="VoidBean">
-    
-
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="nginx如何解决跨域问题">
-    
-
-    <!--Open Graph Description-->
-    
-
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="Kibo">
-
-    <!--Type page-->
-    
-        <meta property="og:type" content="article">
-    
-
-    <!--Page Cover-->
-    
-
-    <meta name="twitter:card" content="summary">
-    
-
-    <!-- Title -->
-    
-    <title>nginx如何解决跨域问题 - Kibo</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Gallery -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Google Analytics -->
-    
-
-
+    <meta name="author" content="VoidBean"> 
+    <link rel="alternative" href="atom.xml" title="Kibo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
 </head>
-
-
-<body>
-
-<div class="bg-gradient"></div>
-<div class="bg-pattern"></div>
-
-<!-- Menu -->
-<!--Menu Links and Overlay-->
-<div class="menu-bg">
-    <div class="menu-container">
-        <ul>
-            
-            <li class="menu-item">
-                <a href="/">
-                    Home
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/archives">
-                    Archives
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/about.html">
-                    About
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/tags">
-                    Tags
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/categories">
-                    Categories
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/contact.html">
-                    Contact
-                </a>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
-<!--Hamburger Icon-->
-<nav>
-    <a href="#menu"></a>
-</nav>
-
-<div class="container">
-
-    <!-- Main Content -->
-    <div class="row">
-    <div class="col-sm-12">
-
-        <!--Title and Logo-->
-        <header>
-    <div class="logo">
-        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
-        
-    </div>
-</header>
-
-        <section class="main">
-            
-<div class="post">
-
-    <div class="post-header">
-        <h1 class="title">
-            <a href="/2018/08/30/nginx解决跨域原理及相关配置/">
-                nginx如何解决跨域问题
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2018-08-30</span>
-            
-            
-            
+</html>
+<body class="loading">
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">nginx如何解决跨域问题</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
         </div>
     </div>
+    <div class="scrollbar"></div>
+</div>
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">nginx如何解决跨域问题</h1>
+        <div class="stuff">
+            <span>八月 30, 2018</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/nginx/">nginx</a></li></ul>
 
-    <div class="content">
 
-        <!-- Gallery -->
-        
-
-        <!-- Post Content -->
-        <h1 id="nginx解决跨域原理及相关配置"><a href="#nginx解决跨域原理及相关配置" class="headerlink" title="nginx解决跨域原理及相关配置"></a>nginx解决跨域原理及相关配置</h1><h3 id="1、什么是跨域"><a href="#1、什么是跨域" class="headerlink" title="1、什么是跨域"></a>1、什么是跨域</h3><p>从某一个域请求其他域的各类资源，其中只要两个地址的域名、端口以及协议有不同的地方就会视为跨域，跨域资源无法直接获取。<br>比如：<br>域名不同  www.<strong>a</strong>.com/1.html 请求 www.<strong>b</strong>.com/1.js<br>端口不同  <a href="http://www.a.com:**8000**/1.html" target="_blank" rel="noopener">www.a.com:**8000**/1.html</a> 请求 <a href="http://www.a.com:**8001**/1.js" target="_blank" rel="noopener">www.a.com:**8001**/1.js</a><br>协议不同  <strong>http</strong>://<a href="http://www.a.com/1.html" target="_blank" rel="noopener">www.a.com/1.html</a> 请求 <strong>https</strong>://<a href="http://www.a.com/1.html" target="_blank" rel="noopener">www.a.com/1.html</a> </p>
+        </div>
+        <div class="content markdown">
+            <h1 id="nginx解决跨域原理及相关配置"><a href="#nginx解决跨域原理及相关配置" class="headerlink" title="nginx解决跨域原理及相关配置"></a>nginx解决跨域原理及相关配置</h1><h3 id="1、什么是跨域"><a href="#1、什么是跨域" class="headerlink" title="1、什么是跨域"></a>1、什么是跨域</h3><p>从某一个域请求其他域的各类资源，其中只要两个地址的域名、端口以及协议有不同的地方就会视为跨域，跨域资源无法直接获取。<br>比如：<br>域名不同  www.<strong>a</strong>.com/1.html 请求 www.<strong>b</strong>.com/1.js<br>端口不同  <a href="http://www.a.com:**8000**/1.html" target="_blank" rel="noopener">www.a.com:**8000**/1.html</a> 请求 <a href="http://www.a.com:**8001**/1.js" target="_blank" rel="noopener">www.a.com:**8001**/1.js</a><br>协议不同  <strong>http</strong>://<a href="http://www.a.com/1.html" target="_blank" rel="noopener">www.a.com/1.html</a> 请求 <strong>https</strong>://<a href="http://www.a.com/1.html" target="_blank" rel="noopener">www.a.com/1.html</a> </p>
 <h3 id="2、nginx如何解决跨域问题"><a href="#2、nginx如何解决跨域问题" class="headerlink" title="2、nginx如何解决跨域问题"></a>2、nginx如何解决跨域问题</h3><p>拿上面的来举例，a网站向b网站请求1.js文件时，向b网站发送一个获取的请求，nginx根据配置文件接收这个请求，代替a网站向b网站来请求这个资源，nginx拿到这个资源后再返回给a网站，以此来解决了跨域问题。</p>
 <h3 id="3、nginx配置"><a href="#3、nginx配置" class="headerlink" title="3、nginx配置"></a>3、nginx配置</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  server &#123;</span><br><span class="line">  		#监听8000端口</span><br><span class="line">        listen       8000;</span><br><span class="line">        #监听指定的ip地址</span><br><span class="line">        server_name  10.10.2.116;</span><br><span class="line">        #对对应url路径执行反向代理,如10.10.2.116:8000/demo</span><br><span class="line">        location /demo &#123;</span><br><span class="line">        #目标的ip地址</span><br><span class="line">            proxy_pass http://10.10.2.116:10037; </span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>通过此配置可以实现访问10.10.2.116的8000端口来获取同ip下10037端口下的相应资源</p>
 
-    </div>
-
-    
-
-    
-        <div class="post-tags">
-            <i class="fa fa-tags" aria-hidden="true"></i>
-            <a href="/tags/nginx/">#nginx</a>
-        </div>
-    
-
-    <!-- Comments -->
-    
-
-</div>
-        </section>
-
-    </div>
-</div>
-
-
-</div>
-
-<!-- Footer -->
-<div class="push"></div>
-
-<footer class="footer-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
-                <h2>About</h2>
-                <p>
-                    This theme was developed by <a href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
-                </p>
-            </div>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
             
-    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
-        <h2>Recent Posts</h2>
-        <ul>
-            
-            <li>
-                <a class="footer-post" href="/2018/12/27/通过assembly自定义maven打包方式/">通过assembly自定义maven打包方式</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2018/12/27/ESPER引擎执行告警判断/">ESPER引擎执行告警判断</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2018/12/14/通过RestTemplate向Eureka注册的服务发送请求/">通过RestTemplate向Eureka注册的服</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2018/10/22/Elasticsearch2.X与5.X中文分词插件IK的配置/">Elasticsearch2.X与5.X中文分词插</a>
-            </li>
-            
-        </ul>
-    </div>
-
-
-
-            
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <ul class="list-inline footer-social-icons">
+                <ul id="audio-list" style="display:none">
                     
-                    <li class="list-inline-item">
-                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-github"></i>
-                            </span>
-                        </a>
-                    </li>
+                        <li title="0" data-url="http://link.hhtjim.com/163/5146554.mp3"></li>
                     
-                    
-                    <li class="list-inline-item">
-                        <a href="https://twitter.com/?lang=en">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-twitter"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://www.facebook.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-facebook"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://www.instagram.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-instagram"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://dribbble.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-dribbble"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://plus.google.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-google-plus"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://www.behance.net/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-behance"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://500px.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-500px"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="mailto:test@example.com">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-envelope-o"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="\#">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-rss"></i>
-                            </span>
-                        </a>
-                    </li>
+                        <li title="1" data-url="http://link.hhtjim.com/qq/001faIUs4M2zna.mp3"></li>
                     
                 </ul>
-            </div>
+            
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="footer-copyright">
-                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+        
+    <div id="gitalk-container" class="comment link" data-ae="false" data-ci="" data-cs="" data-r="" data-o="" data-a="" data-d="false">查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
                 </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
             </div>
         </div>
     </div>
-</footer>
-
-<!-- After footer scripts -->
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
+</div>
 
 
 
-</body>
 
 </html>
