@@ -348,12 +348,10 @@
     <article class="index-post">
         <a class="abstract-title" href="/2019/01/14/ElasticSearch 通过获取Status获取备份文件占用空间的大小/">
             
-                <span>[Untitled Post]</span>
+                <span>ElasticSearch 通过获取Status获取备份文件占用空间的大小</span>
         </a>
         <div class="abstract-content">
-            ElasticSearch 通过获取Status获取备份文件占用空间的大小ElasticSearch API向 127.0.0.1:9200/_snapshot/备份仓库名/快照名/_status发送请求即可获取快照状态，可在stats.total_size_in_bytes中获取到备份的文件大小。注意的是这里获取的单位是byte，如果想直接获取已经转换好的单位，可以加上human参数，如下：
-127.0.0.1:9200/_snapshot/备份仓库名/快照名/_status?human
-此时返回的stats里会出现total_size字段，该字段会根据具体大小自动转换成MB、TB等单...
+            最近的需求，需要获取备份仓库中的指定快照占用空间的大小。稍微看了下官方文档整理了一下。
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -361,6 +359,14 @@
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/14</span>
             </div>
             <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="elasticsearch">elasticsearch</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="JAVA">JAVA</a>
+    
+</div>
             
         </div>
     </article>
@@ -595,7 +601,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/14</span><a class="archive-post-title" href="/2019/01/14/ElasticSearch 通过获取Status获取备份文件占用空间的大小/">[Untitled Post]</a>
+            <span class="archive-post-date">01/14</span><a class="archive-post-title" href="/2019/01/14/ElasticSearch 通过获取Status获取备份文件占用空间的大小/">ElasticSearch 通过获取Status获取备份文件占用空间的大小</a>
         </li>
     
     
@@ -669,6 +675,8 @@
         <span class="sidebar-tag-name" data-tags="Eureka"><span class="iconfont-archer">&#xe606;</span>Eureka</span>
     
         <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
+    
+        <span class="sidebar-tag-name" data-tags="JAVA"><span class="iconfont-archer">&#xe606;</span>JAVA</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
