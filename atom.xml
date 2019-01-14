@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://voidbean.top/"/>
-  <updated>2018-12-27T02:42:19.686Z</updated>
+  <updated>2019-01-14T07:31:39.974Z</updated>
   <id>http://voidbean.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://voidbean.top/2019/01/14/ElasticSearch%20%E9%80%9A%E8%BF%87%E8%8E%B7%E5%8F%96Status%E8%8E%B7%E5%8F%96%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E5%8D%A0%E7%94%A8%E7%A9%BA%E9%97%B4%E7%9A%84%E5%A4%A7%E5%B0%8F/"/>
+    <id>http://voidbean.top/2019/01/14/ElasticSearch 通过获取Status获取备份文件占用空间的大小/</id>
+    <published>2019-01-14T07:35:05.407Z</published>
+    <updated>2019-01-14T07:31:39.974Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ElasticSearch-通过获取Status获取备份文件占用空间的大小"><a href="#ElasticSearch-通过获取Status获取备份文件占用空间的大小" class="headerlink" title="ElasticSearch 通过获取Status获取备份文件占用空间的大小"></a>ElasticSearch 通过获取Status获取备份文件占用空间的大小</h1><h2 id="ElasticSearch-API"><a href="#ElasticSearch-API" class="headerlink" title="ElasticSearch API"></a>ElasticSearch API</h2><p>向 <code>127.0.0.1:9200/_snapshot/备份仓库名/快照名/_status</code>发送请求即可获取快照状态，可在stats.total_size_in_bytes中获取到备份的文件大小。注意的是这里获取的单位是byte，如果想直接获取已经转换好的单位，可以加上human参数，如下：</p><p><code>127.0.0.1:9200/_snapshot/备份仓库名/快照名/_status?human</code></p><p>此时返回的stats里会出现total_size字段，该字段会根据具体大小自动转换成MB、TB等单位。</p><p>关于这部分带human参数的返回字段描述，可以参照</p><blockquote><p><a href="https://github.com/elastic/elasticsearch/issues/18543#event-1647308307" target="_blank" rel="noopener">https://github.com/elastic/elasticsearch/issues/18543#event-1647308307</a></p></blockquote><h2 id="JAVA-API"><a href="#JAVA-API" class="headerlink" title="JAVA API"></a>JAVA API</h2><p>如果要使用JAVA获取文件大小，首先要声明Client，我使用的是TransportClient，在配置文件中配置如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  data:</span><br><span class="line">    #ElasticSearch地址</span><br><span class="line">    elasticsearch:</span><br><span class="line">      cluster-name: elasticsearch</span><br><span class="line">      cluster-nodes: 127.0.0.1:9300</span><br></pre></td></tr></table></figure><p>然后@AutoWired注入<code>TransportClient transportClient</code></p><p>在需要使用的地方加入如下代码：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String[] snapshotsName = <span class="keyword">new</span> String[]&#123;<span class="string">"快照1"</span>,<span class="string">"快照2&#125;; //快照名,必须是字符数组</span></span><br><span class="line"><span class="string">SnapshotsStatusRequest request = new SnapshotsStatusRequest().repository("</span>c备份仓库名<span class="string">").snapshots(snapshotsName);</span></span><br><span class="line"><span class="string">SnapshotsStatusResponse response = transportClient.admin().cluster().snapshotsStatus(request).actionGet(); //通过client和request获取response</span></span><br><span class="line"><span class="string">List&lt;SnapshotStatus&gt; list = response.getSnapshots(); //获取response中的数据</span></span><br></pre></td></tr></table></figure><p>至此获得到了snapshot status的信息。</p><p>其他的Client获取Response可以参考官方文档：</p><blockquote><p>SnapShotStatus JAVA API<br><a href="https://www.elastic.co/guide/en/elasticsearch/client/java-rest/6.x/java-rest-high-snapshot-snapshots-status.html" target="_blank" rel="noopener">https://www.elastic.co/guide/en/elasticsearch/client/java-rest/6.x/java-rest-high-snapshot-snapshots-status.html</a><br>Transport Clinet API<br><a href="https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/transport-client.html" target="_blank" rel="noopener">https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/transport-client.html</a><br>RestHighLevelClient API<br><a href="https://www.elastic.co/guide/en/elasticsearch/client/java-rest/6.x/java-rest-high-getting-started-initialization.html" target="_blank" rel="noopener">https://www.elastic.co/guide/en/elasticsearch/client/java-rest/6.x/java-rest-high-getting-started-initialization.html</a></p></blockquote><p>可惜JAVA API中的实体类SnapshotStatus并没有针对human参数获取转换好格式的文件大小，只能通过<code>snapshotStatusList.get(0).getStats().getTotalSize()</code>获取到Long型的byte单位的备份文件大小。如果要手动转换，手动转换如下：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">revertSize</span><span class="params">(Long size)</span></span>&#123;</span><br><span class="line">    Float sizeFloat = size.floatValue();</span><br><span class="line">    String[] NAME = <span class="keyword">new</span> String[]&#123;<span class="string">"byte"</span>,<span class="string">"KB"</span>,<span class="string">"MB"</span>,<span class="string">"GB"</span>,<span class="string">"TB"</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(sizeFloat/<span class="number">1024</span>&gt;=<span class="number">1</span>)&#123;</span><br><span class="line">        sizeFloat=sizeFloat/<span class="number">1024</span>;</span><br><span class="line">        num++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> DecimalFormat(<span class="string">".00"</span>).format(sizeFloat) + NAME[num];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;ElasticSearch-通过获取Status获取备份文件占用空间的大小&quot;&gt;&lt;a href=&quot;#ElasticSearch-通过获取Status获取备份文件占用空间的大小&quot; class=&quot;headerlink&quot; title=&quot;ElasticSearch 通过获取
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>通过assembly自定义maven打包方式</title>

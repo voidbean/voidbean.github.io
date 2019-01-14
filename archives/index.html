@@ -346,6 +346,31 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/01/14/ElasticSearch 通过获取Status获取备份文件占用空间的大小/">
+            
+                <span>[Untitled Post]</span>
+        </a>
+        <div class="abstract-content">
+            ElasticSearch 通过获取Status获取备份文件占用空间的大小ElasticSearch API向 127.0.0.1:9200/_snapshot/备份仓库名/快照名/_status发送请求即可获取快照状态，可在stats.total_size_in_bytes中获取到备份的文件大小。注意的是这里获取的单位是byte，如果想直接获取已经转换好的单位，可以加上human参数，如下：
+127.0.0.1:9200/_snapshot/备份仓库名/快照名/_status?human
+此时返回的stats里会出现total_size字段，该字段会根据具体大小自动转换成MB、TB等单...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/14</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2018/12/27/通过assembly自定义maven打包方式/">
             
                 <span>通过assembly自定义maven打包方式</span>
@@ -773,9 +798,30 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 8
+        Total : 9
         </div>
         <!-- search  -->
         
@@ -785,6 +831,20 @@
     
     
     
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/14</span><a class="archive-post-title" href="/2019/01/14/ElasticSearch 通过获取Status获取备份文件占用空间的大小/">[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
