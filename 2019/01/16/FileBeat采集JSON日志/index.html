@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Bean|Alter</title>
+    <title>FileBeat采集JSON日志 · Bean|Alter</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Chaldeas</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">FileBeat采集JSON日志</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">Chaldeas</a>
 </header>
@@ -220,24 +231,76 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            FileBeat采集JSON日志
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="FileBeat">FileBeat</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Elasticsearch">Elasticsearch</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">725</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/01/16</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,43 +401,85 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/12/14/通过RestTemplate向Eureka注册的服务发送请求/">
-            
-                <span>通过RestTemplate向Eureka注册的服务发送请求</span>
-        </a>
-        <div class="abstract-content">
-            挂载在Eureka上的微服务之间相互通信，通过@LoadBalanced动态获取其他微服务的地址进行相关的操作。
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/12/14</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="SpringBoot">SpringBoot</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="RestTemplate">RestTemplate</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Eureka">Eureka</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="FileBeat采集JSON日志"><a href="#FileBeat采集JSON日志" class="headerlink" title="FileBeat采集JSON日志"></a>FileBeat采集JSON日志</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>使用FileBeat采集JSON日志传输到logstash或者elasticsearch中，其中FileBeat的版本为5.5.0，Elasticsearch的版本为5.6.8</p>
+<h2 id="文件配置"><a href="#文件配置" class="headerlink" title="文件配置"></a>文件配置</h2><h3 id="简单配置"><a href="#简单配置" class="headerlink" title="简单配置"></a>简单配置</h3><p>关于配置filebeat的json采集，主要需要注意的有以下几个配置项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#keys_under_root可以让字段位于根节点，默认为false</span><br><span class="line">json.keys_under_root: true</span><br><span class="line">#对于同名的key，覆盖原有key值</span><br><span class="line">json.overwrite_keys: true</span><br><span class="line">#message_key是用来合并多行json日志使用的，如果配置该项还需要配置multiline的设置，后面会讲</span><br><span class="line">json.message_key: message</span><br><span class="line">#将解析错误的消息记录储存在error.message字段中</span><br><span class="line">json.add_error_key: true</span><br></pre></td></tr></table></figure>
+<p>参考的官方文档</p>
+<blockquote>
+<p><a href="https://www.elastic.co/guide/en/beats/filebeat/6.2/configuration-filebeat-options.html" target="_blank" rel="noopener">https://www.elastic.co/guide/en/beats/filebeat/6.2/configuration-filebeat-options.html</a></p>
+</blockquote>
+<p>上面的几个配置项，只要配置了任意一项，filebeat就会开启json采集的功能。配置完成后filebeat会和采集正常的日志一样，对path中配置的json文件路径进行采集，然后会将json报文中的字段存储到es中。</p>
+<p>要注意的是，这种配置下关于multiline的配置，如果配置了multiline，会开启合并多条json日志的功能，如果不需要该功能请务必注释掉该yml中关于multiline的配置。</p>
+<h3 id="多行合并配置"><a href="#多行合并配置" class="headerlink" title="多行合并配置"></a>多行合并配置</h3><p>在上面的配置中有提到关于multiline的配置，如果配置了multiline，那么必须配置message_key。在这两者配置完成后，假设日志如下json体：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">"id"</span>:<span class="string">"01"</span>,<span class="attr">"message"</span>:<span class="string">"我是第一条信息"</span>,<span class="attr">"logDate"</span>:<span class="string">"2019-1-16 17:39:31"</span>&#125;</span><br><span class="line">&#123;<span class="attr">"id"</span>:<span class="string">"02"</span>,<span class="attr">"message"</span>:<span class="string">"我是第二条信息"</span>,<span class="attr">"logDate"</span>:<span class="string">"2019-1-16 17:40:20"</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>filebeat会自动合并id为01和id为02的两条日志，在es中会看到对应的index中只有一条数据，其中message为<code>&quot;我是第一条信息我是第二条信息&quot;</code>。所以为了换行需要给原本json日志中的message加上标识符，用于标识是否需要合并为一条日志。范例如下</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">"id"</span>:<span class="string">"01"</span>,<span class="attr">"message"</span>:<span class="string">"[01-2019]我是第一条信息"</span>,<span class="attr">"logDate"</span>:<span class="string">"2019-1-16 17:39:31"</span>&#125;</span><br><span class="line">&#123;<span class="attr">"id"</span>:<span class="string">"02"</span>,<span class="attr">"message"</span>:<span class="string">"我是第二条信息"</span>,<span class="attr">"logDate"</span>:<span class="string">"2019-1-16 17:40:20"</span>&#125;</span><br><span class="line">&#123;<span class="attr">"id"</span>:<span class="string">"03"</span>,<span class="attr">"message"</span>:<span class="string">"[03-2019]我是第三条信息"</span>,<span class="attr">"logDate"</span>:<span class="string">"2019-1-16 17:41:34"</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>然后对multiline相关的配置如下:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将'['作为新的一行的标识，如果message中不碰到'[',则合并为一条日志</span></span><br><span class="line"><span class="string">multiline.pattern:</span> <span class="string">^\[</span></span><br><span class="line"><span class="string">multiline.negate:</span> <span class="literal">true</span></span><br><span class="line"><span class="string">multiline.match:</span> <span class="string">after</span></span><br></pre></td></tr></table></figure>
+<p>同时配置</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">processors:</span></span><br><span class="line"><span class="attr">  - decode_json_fields:</span></span><br><span class="line"><span class="attr">      fields:</span> <span class="string">['message']</span></span><br><span class="line"><span class="attr">      target:</span> <span class="string">json</span></span><br></pre></td></tr></table></figure>
+<p>配置完成后再次启动filebeat，则对应的es中的日志为两条</p>
+<p>其中第一条的message：<code>[01-2019]我是第一条信息我是第二条信息</code></p>
+<p>第二条的message：<code>[03-2019]我是第三条信息</code></p>
+<p>通过这种方式可以实现多行日志的合并与分离（顺带一提如果不需要多行合并的话务必记得注释掉multiline，不然你会发现你的json的日志在es中全部合并成了一条……）。</p>
+
     </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://voidbean.top">VoidBean</a>
+            </p><p>原文链接：<a href="http://voidbean.top/2019/01/16/FileBeat采集JSON日志/">http://voidbean.top/2019/01/16/FileBeat采集JSON日志/</a>
+            </p><p>发表日期：<a href="http://voidbean.top/2019/01/16/FileBeat采集JSON日志/">January 16th 2019, 5:12:32 pm</a>
+            </p><p>更新日期：<a href="http://voidbean.top/2019/01/16/FileBeat采集JSON日志/">January 17th 2019, 1:56:12 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/01/14/ElasticSearch 通过获取Status获取备份文件占用空间的大小/" title="ElasticSearch 通过获取Status获取备份文件占用空间的大小">
+                    <div class="prevTitle">ElasticSearch 通过获取Status获取备份文件占用空间的大小</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <div id="comment"></div>
+    <script>
+    new Valine({
+        el: '#comment' ,
+        notify:false, 
+        verify:false, 
+        appId: "L4m31LVmEHOwcD7UA1PpYoPB-gzGzoHsz",
+        appKey: "d7cvHM1B1VcEoxsJjUeTOKVe",
+        placeholder: "这位客官~来都来了别着急走啊~",
+        path:window.location.pathname, 
+        avatar:'mm' 
+    });
+    </script>
+
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -471,6 +576,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#FileBeat采集JSON日志"><span class="toc-number">1.</span> <span class="toc-text">FileBeat采集JSON日志</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件配置"><span class="toc-number">1.2.</span> <span class="toc-text">文件配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简单配置"><span class="toc-number">1.2.1.</span> <span class="toc-text">简单配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多行合并配置"><span class="toc-number">1.2.2.</span> <span class="toc-text">多行合并配置</span></a></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -777,6 +900,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

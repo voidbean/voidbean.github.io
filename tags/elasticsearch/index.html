@@ -346,85 +346,25 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2019/01/14/ElasticSearch 通过获取Status获取备份文件占用空间的大小/">
+        <a class="abstract-title" href="/2019/01/16/FileBeat采集JSON日志/">
             
-                <span>ElasticSearch 通过获取Status获取备份文件占用空间的大小</span>
+                <span>FileBeat采集JSON日志</span>
         </a>
         <div class="abstract-content">
-            最近的需求，需要获取备份仓库中的指定快照占用空间的大小。稍微看了下官方文档整理了一下。
+            采集JSON格式的日志，同时将JSON中的字段存入ES中。除此之外还有关于多行（多条）JSON数据合并处理的配置。
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/14</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/16</span>
             </div>
             <!-- tags  -->
             
             <div class="abstract-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="elasticsearch">elasticsearch</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="FileBeat">FileBeat</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="JAVA">JAVA</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/10/22/Elasticsearch2.X与5.X中文分词插件IK的配置/">
-            
-                <span>Elasticsearch2.X与5.X中文分词插件IK配置详解</span>
-        </a>
-        <div class="abstract-content">
-            关于ElasticSearch的分词插件的配置，为了替换掉原来的睿智分词进行了一定程度的修改。IK分词功能着实强大，然而此时英文分词又会出现一定问题，本文顺带解决了下英文分词的部分问题。除此之外还有坑爹的ES配置，2.X和5.X版本跨度也是没谁了。
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="elasticsearch">elasticsearch</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="中文分词">中文分词</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/09/18/ES配置常见问题/">
-            
-                <span>ES配置常见问题</span>
-        </a>
-        <div class="abstract-content">
-            Linux虚拟机配置ES时出了的一些问题，比如用户权限过低、内存不够、线程数不足，反正要求多的一批……
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="elasticsearch">elasticsearch</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Elasticsearch">Elasticsearch</a>
     
 </div>
             
@@ -643,9 +583,32 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 9
+        Total : 10
         </div>
         <!-- search  -->
         
@@ -658,6 +621,11 @@
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/16</span><a class="archive-post-title" href="/2019/01/16/FileBeat采集JSON日志/">FileBeat采集JSON日志</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -737,6 +705,86 @@
         <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
     
         <span class="sidebar-tag-name" data-tags="JAVA"><span class="iconfont-archer">&#xe606;</span>JAVA</span>
+    
+        <span class="sidebar-tag-name" data-tags="FileBeat"><span class="iconfont-archer">&#xe606;</span>FileBeat</span>
+    
+        <span class="sidebar-tag-name" data-tags="Elasticsearch"><span class="iconfont-archer">&#xe606;</span>Elasticsearch</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br>
+    1、请确保node版本大于6.2<br>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: "/",
+        author: "VoidBean"
+    }
+</script>
+    <!-- CDN failover -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ === 'undefined')
+        {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js">\x3C/script>')
+        }
+    </script>
+    <script src="/scripts/main.js"></script>
+    <!-- algolia -->
+    
+    <!-- busuanzi  -->
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+     
+    </body>
+</html>
+
+
+class="iconfont-archer">&#xe606;</span>JAVA</span>
+    
+        <span class="sidebar-tag-name" data-tags="FileBeat"><span class="iconfont-archer">&#xe606;</span>FileBeat</span>
+    
+        <span class="sidebar-tag-name" data-tags="Elasticsearch"><span class="iconfont-archer">&#xe606;</span>Elasticsearch</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
